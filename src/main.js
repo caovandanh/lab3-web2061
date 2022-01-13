@@ -4,7 +4,6 @@ import Header from "./components/header";
 import AboutPage from "./pages/about";
 import HomePage from "./pages/home";
 import NewsDetail from "./pages/newsDetail";
-import Signin from "./pages/signin";
 import Signup from "./pages/signup";
 
 const router = new Navigo("/", { linksSelector: "a" });
@@ -25,9 +24,6 @@ router.on({
     "/news/:id": ({ data }) => {
         const { id } = data;
         print(NewsDetail.render(id));
-    },
-    "/signin": () => {
-        print(Signin.render());
     },
     "/signup": () => {
         print(Signup.render());
